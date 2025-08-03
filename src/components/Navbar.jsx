@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Megaphone } from 'lucide-react';
 import { FaTimes } from "react-icons/fa";
+import GanpatiLogo from "../assets/Hero.jpeg"; // Update path to your logo
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -27,13 +28,15 @@ const Navbar = () => {
       <nav className="bg-white shadow-md fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
-            {/* Logo */}
-            <div className="flex-shrink-0 flex items-center space-x-2">
-              <img
-                src="/logo.png" // Replace with your logo path
-                alt="Logo"
-                className="h-12 w-12 object-contain"
-              />
+            {/* Logo with circular container */}
+            <div className="flex-shrink-0 flex items-center space-x-3">
+              <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-orange-500 shadow-sm">
+                <img
+                  src={GanpatiLogo}
+                  alt="नव गजानन मित्र मंडळ Logo"
+                  className="h-full w-full object-cover"
+                />
+              </div>
               <span className="text-lg font-bold text-orange-600">नव गजानन मित्र मंडळ</span>
             </div>
 
